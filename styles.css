@@ -1,0 +1,201 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    justify-content: flex-start;  /* Align items at the top */
+    min-height: 100vh;
+}
+/* Navigation */
+#top {
+    background-color: #113546;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+}
+
+#logo, img {
+    border-radius: 0.2rem;
+    height: 3rem;
+}
+.Blogo {
+    border-radius: 0.2rem;
+    height: 3rem;
+}
+
+#top h1 {
+    margin: 0;
+    margin-right: 5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;  /* Space between menu items */
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Body middle */
+.Id{
+ font-size: 0.9rem;
+ width: 10rem;
+ margin: 0;
+ margin-left: 1rem;
+ display: block;
+}
+.header-container {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+#search-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: fixed;
+    left: 32%;
+}
+#search-input {
+    padding: 8px;
+    width: 250px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 0.4rem 2.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    background-color: white;
+    width: 60px;  /* Fixed width */
+    height: 40px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search-cat {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#search-button:hover {
+    background-color: #007bff;
+    color: white;
+    
+}
+
+
+
+
+#image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centering horizontally and vertically */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styles */
+#animated-image {
+    width: 100px;  /* Set width as needed */
+    height: auto;
+    opacity: 1;
+    animation: fadeOut 3s forwards;  /* Apply the fadeOut animation */
+    border-radius: 1rem;
+}
+
+/* FadeOut animation: Change opacity from 1 to 0 in 5 seconds */
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+
+/* Kalender */
+
+.calendar {
+    background-color: #113546;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #222222;
+    overflow: hidden;
+    width: 300px;
+    color: white;
+    padding: 20px;
+    transform: scale(0.7);
+    transform-origin: top left;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.btn {
+    cursor: pointer;
+}
+#month-year {
+    font-weight: bold;
+    font-size: 20px;
+}
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+.days {
+    height: 240px;
+}
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.days div {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.days div:hover {
+    background-color: white;
+    color: orangered;
+}
+.days .today {
+    background-color: orangered;
+    color: white;
+}
+.days .fade {
+    color: #555;
+}

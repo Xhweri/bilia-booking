@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div id="top">
+        <ul id="nav">
+            <li><a href="#boka">Boka</a></li>
+            <li><a href="#registrera">Registrera</a></li>
+            <li><a href="#visa">Visa</a></li>
+            <li><a href="#om">Om</a></li>
+        </ul>
+        <h1>Bokningssystem</h1>
+        <div class="logo">
+            <a href="https://www.bilia.se/"><img src="/image.png" alt="Bilia Logo" ></a>
+        </div>
+    </div>
+        <div class="header-container">
+            <h3 class="Id">Du är inloggad som: <br>Brusk Karim</h3>
+            <div id="search-container">
+                <select id="search-cat" class="search-cat">
+                    <option value="RegNr">Reg Nummer</option>
+                    <option value="Namn">Namn</option>
+                    <option value="Bil">Bil</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Sök..."/>
+                <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    <div id="image-container">
+        <img src="B.png" alt="Animated Image" id="animated-image">
+    </div>
+   
+    <div class="calendar">
+        <div class="header">
+            <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="month-year"></div>
+            <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div class="days" id="days"></div>
+    </div>
+
+    <script src="back.js"></script>
+</body>
+</html>
