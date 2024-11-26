@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let searchInp = document.querySelector("#search-input");
 let searchCat = document.querySelector("#search-cat");
 let searchBtn=document.querySelector("#search-button");
+let aniLogo=document.querySelector("#animated-image");
 console.log(searchInp);
 
 searchCat.addEventListener("change", () => {
@@ -75,4 +76,3 @@ searchCat.addEventListener("change", () => {
         searchBtn.style.padding = "0.4rem 2.5rem";
     }
 });
-

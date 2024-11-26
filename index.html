@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
@@ -27,7 +27,7 @@
             <h3 class="Id">Du är inloggad som: <br>Brusk Karim</h3>
             <div id="search-container">
                 <select id="search-cat" class="search-cat">
-                    <option value="RegNr">Reg Nummer</option>
+                    <option value="RegNr">Reg</option>
                     <option value="Namn">Namn</option>
                     <option value="Bil">Bil</option>
                 </select>
@@ -55,6 +55,69 @@
             <div>Sat</div>
         </div>
         <div class="days" id="days"></div>
+    </div>
+    <div class="booking-cont" id="bookingCont">
+        <div>
+            <ol class="olcards">
+                <li style="--cardColor:#fc374e">
+                    <div class="content">
+                        <div class="reg">LGA12F</div>
+                        <div class="text">Lorem ipsum</div>
+                        <p class="tid">07:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+                <li style="--cardColor:#36aeb3">
+                    <div class="content">
+                        <div class="reg">BXX82L</div>
+                        <div class="text">Lorem it amet consectetur </div>
+                        <i class="fas fa-exclamation-circle , extraInf"></i>
+                        <p class="tid">08:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+                <li style="--cardColor:#162d59">
+                    <div class="content">
+                        <div class="reg">ABC123</div>
+                        <div class="text">Lorem ipsum dolor</div>
+                        <p class="tid">09:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+                <li style="--cardColor:#f15f0e">
+                    <div class="content">
+                        <div class="reg">QON829</div>
+                        <div class="text">Lorem </div>
+                        <p class="tid">10:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+                <li style="--cardColor:#f15f0e">
+                    <div class="content">
+                        <div class="reg">SAG893</div>
+                        <div class="text">Lorem ipsum dolor sit</div>
+                        <i class="fas fa-exclamation-circle , extraInf"></i>
+                        <p class="tid">11:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+                <li style="--cardColor:#f15f0e">
+                    <div class="content lunch">
+                        <div class="reg ">Lunch</div>
+                        <p class="tid">12:00</p>
+                    </div>
+                </li> 
+                <li style="--cardColor:#f15f0e">
+                    <div class="content">
+                        <div class="reg">TRR813</div>
+                        <div class="text">Lorem ipsum dolor sit</div>
+                        <i class="fas fa-exclamation-circle , extraInf"></i>
+                        <p class="tid">11:00</p>
+                        <i class="fa-solid fa-pen penEd"></i>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </div>
 
     <script src="back.js"></script>

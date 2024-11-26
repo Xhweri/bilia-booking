@@ -11,7 +11,8 @@ body {
 #top {
     background-color: #113546;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 16px;
+    padding-right: 0;
     display: flex;
     align-items: center;  
     justify-content: space-between; 
@@ -75,12 +76,16 @@ body {
     justify-content: center;
     gap: 0.5rem;
     position: fixed;
-    left: 32%;
+    left: 38.2%;  /*Positionen av sökcontainer "hori" */
 }
 #search-input {
     padding: 8px;
-    width: 250px;
-    font-size: 16px;
+    width: 12rem;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #113546;
+    color: white;
+    font-weight: bold;
 }
 
 #search-button {
@@ -90,18 +95,21 @@ body {
     border-width: 1px;
     border-radius: 0.3rem;
     background-color: white;
-    width: 60px;  /* Fixed width */
-    height: 40px; /* Fixed height */
+    width: 1rem;  /* Fixed width */
+    height: 2rem; /* Fixed height */
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 .search-cat {
-    padding: 8px;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
     cursor: pointer;
     border-radius: 4px;
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
 }
 #search-button:hover {
     background-color: #007bff;
@@ -132,27 +140,33 @@ body {
     border-radius: 1rem;
 }
 
-/* FadeOut animation: Change opacity from 1 to 0 in 5 seconds */
+
+/* FadeOut animation: Change opacity from 1 to 0 in 3 seconds */
 @keyframes fadeOut {
     0% {
-        opacity: 0;
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 1; /* Fully visible midway */
     }
     100% {
-        opacity: 1;
-    } 
+        opacity: 0; /* Fade out completely */
+    }
 }
 
 /* Kalender */
 
 .calendar {
+    position: fixed;
+    top: 65%;
     background-color: #113546;
     border-radius: 10px;
     box-shadow: 0 0 30px #222222;
     overflow: hidden;
-    width: 300px;
+    width: 350px;
     color: white;
     padding: 20px;
-    transform: scale(0.7);
+    transform: scale(0.6);
     transform-origin: top left;
     margin-left: 0.5rem;
     margin-top: 1rem;
@@ -165,6 +179,7 @@ body {
     padding: 10px;
 }
 .btn {
+    color: orangered;
     cursor: pointer;
 }
 #month-year {
@@ -186,7 +201,8 @@ body {
 }
 .days div {
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.25s;
+    padding: 15px 0;
 }
 .days div:hover {
     background-color: white;
@@ -198,4 +214,118 @@ body {
 }
 .days .fade {
     color: #555;
+}
+
+
+/* Booknings kontainer */
+
+.booking-cont{
+    position:fixed;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 80%;
+    left: 25%;
+    border: 3px black solid;
+    border-radius: 5px;
+    
+}
+.olcards,
+.olcards * {
+    width: 99%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.olcards li {
+counter-increment: cardCount;
+  display: flex;
+  color: white;
+  --labelOffset: 0.5rem;
+  --arrowClipSize: 0;
+  margin-top: var(--labelOffset);
+  
+}
+
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 1rem;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-2 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5rem;
+  }
+
+  .olcards li .content {
+    background-color: rgb(19, 70, 93);
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+      var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    gap: 0.25em 1em;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--arrowClipSize)) 0,
+      100% 50%,
+      calc(100% - var(--arrowClipSize)) 100%,
+      calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+      0 calc(100% + var(--cardsGap))
+    );
+    position: relative;
+    
+  }
+  .olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+}
+.text{
+    margin-left: 1.5rem;
+}
+.reg{
+    margin-left: 1.5rem;
+}
+.extraInf{
+    color: green;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-left:80%;
+    position:absolute;
+    margin-top: 0.5rem;
+    z-index: 10;
+}
+.tid{
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    margin-left:50%;
+    position:absolute;
+    margin-top: 0.5rem;
+    
+}
+
+.lunch{
+    background-color: rgb(19, 164, 82) !important;
+    padding-bottom: 1rem !important;
+}
+.penEd{
+    color: rgb(220, 220, 13);
+    font-size: 1rem;
+    margin-left:97%;
+    position:absolute;
+    margin-top: 0.7rem;
+    align-items: center;
+    z-index: 10;
+    padding: 5px;
 }
