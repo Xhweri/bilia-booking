@@ -63,16 +63,16 @@ searchCat.addEventListener("change", () => {
 
     if (selectedValue === "RegNr") {
         console.log("RegNr");
-        searchBtn.innerHTML=`<img src="lp.png" alt="Animated Image"></img>`;
+        searchBtn.innerHTML=`<i class="fa-solid fa-magnifying-glass ii"></i>`;
     }
     if (selectedValue === "Namn") {
         console.log("RegNr");
-        searchBtn.innerHTML=`<i class="fa-solid fa-id-card"></i>`;
-        searchBtn.style.padding = "0.4rem 2.5rem";
+        searchBtn.innerHTML=`<i class="fa-solid fa-id-card ii"></i>`;
+        
     }
     if (selectedValue === "Bil") {
         console.log("Bil");
-        searchBtn.innerHTML=`<i class="fa-solid fa-car"></i>`;
-        searchBtn.style.padding = "0.4rem 2.5rem";
+        searchBtn.innerHTML=`<i class="fa-solid fa-car ii"></i>`;
+        
     }
 });

@@ -25,15 +25,7 @@
     </div>
         <div class="header-container">
             <h3 class="Id">Du är inloggad som: <br>Brusk Karim</h3>
-            <div id="search-container">
-                <select id="search-cat" class="search-cat">
-                    <option value="RegNr">Reg</option>
-                    <option value="Namn">Namn</option>
-                    <option value="Bil">Bil</option>
-                </select>
-                <input type="text" id="search-input" placeholder="Sök..."/>
-                <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            
         </div>
     <div id="image-container">
         <img src="B.png" alt="Animated Image" id="animated-image">
@@ -56,7 +48,9 @@
         </div>
         <div class="days" id="days"></div>
     </div>
+    
     <div class="booking-cont" id="bookingCont">
+        
         <div>
             <ol class="olcards">
                 <li style="--cardColor:#fc374e">
@@ -119,7 +113,44 @@
             </ol>
         </div>
     </div>
-
+    <div id="search-container">
+        <div class="input-wrapper">
+        <select id="search-cat" class="search-cat">
+            <option value="RegNr">Reg</option>
+            <option value="Namn">Namn</option>
+            <option value="Bil">Bil</option>
+        </select>
+            <input type="text" id="search-input" placeholder="Sök..."/>
+            <button id="search-button"><i class="fa-solid fa-magnifying-glass ii"></i></button>
+        </div>
+    </div>
+    <div class="notification-box">
+        Antal lediga bokningar för dagen
+        <span class="highlight">5</span>
+    </div>
+    
+    <div class="chart-container">
+        <div class="chart-title">Från 2024-11-1 Till 2024-11-8</div>
+        <div class="chart">
+            <div class="bar green" style="height: 20px;"></div>
+            <div class="bar red" style="height: 100px;"></div>
+            <div class="bar red" style="height: 100px;"></div>
+            <div class="bar gray"></div>
+            <div class="bar gray"></div>
+            <div class="bar red" style="height: 100px;"></div>
+            <div class="bar red" style="height: 100px;"></div>
+        </div>
+        <div class="chart-footer">
+            <span>M</span>
+            <span>T</span>
+            <span>O</span>
+            <span>T</span>
+            <span>F</span>
+            <span>L</span>
+            <span>S</span>
+        </div>
+    </div>
+    </div>
     <script src="back.js"></script>
 </body>
 </html>
