@@ -76,3 +76,20 @@ searchCat.addEventListener("change", () => {
         
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const parent = toggle.parentElement;
+            const nested = parent.querySelector('.nested');
+
+            if (nested) {
+                const isOpen = nested.style.display === 'block';
+                nested.style.display = isOpen ? 'none' : 'block';
+                toggle.classList.toggle('open', !isOpen);
+            }
+        });
+    });
+});
