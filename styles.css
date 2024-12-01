@@ -6,6 +6,7 @@ body {
     color: #333;
     justify-content: flex-start;  /* Align items at the top */
     min-height: 100vh;
+    
 }
 
 /* Navigation */
@@ -214,7 +215,7 @@ body {
     margin-left: 0.5rem;
     margin-top: 1rem;
     padding-bottom: 3.5rem;
-    
+    user-select: none;
 }
 .header {
     display: flex;
@@ -274,11 +275,12 @@ body {
     border: 3px rgb(108, 108, 108) solid;
     border-radius: 5px;
     box-shadow: 0 0 10px #222222;
+    overflow: hidden;
     
 }
 .olcards,
 .olcards * {
-    width: 99%;
+width: 99%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -289,9 +291,11 @@ body {
 .olcards li {
 counter-increment: cardCount;
   display: flex;
+  max-width: 100%;
+  overflow: hidden;
   color: white;
+  position: relative;
   --labelOffset: 0.5rem;
-  --arrowClipSize: 0;
   margin-top: var(--labelOffset);
   
 }
@@ -326,22 +330,24 @@ counter-increment: cardCount;
       0 calc(100% + var(--cardsGap))
     );
     position: relative;
-    
+    height: 2.5rem;
   }
   .olcards li .content:hover{
     background-color: #13465de3;
   }
-  .olcards li .content::before {
-    content: "";
-    position: absolute;
-    width: var(--labelOffset);
-    height: var(--labelOffset);
-    background: var(--cardColor);
-    left: 0;
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    filter: brightness(0.75);
+
+ .extraInf{
+    color: green;
+    font-size: 1.7rem;  
+    cursor: pointer;
+    right: 15%;
+    position:absolute;
+    width: 1.8rem;
+    margin-top: 0.5rem;
+    z-index: 10;
+    user-select: none;
 }
+
 .text{
     margin-left: 1.5rem;
 }
@@ -350,22 +356,15 @@ counter-increment: cardCount;
     font-weight: 700;
     color: rgba(255, 234, 0, 0.818);
 }
-.extraInf{
-    color: green;
-    font-size: 1.7rem;  
-    cursor: pointer;
-    margin-left:80%;
-    position:absolute;
-    margin-top: 0.5rem;
-    z-index: 10;
-}
+
 .tid{
     color: rgb(255, 255, 255);
     font-size: 0.9rem;
     margin-left:50%;
     position:absolute;
     margin-top: 0.5rem;
-    
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .lunch{
@@ -375,14 +374,51 @@ counter-increment: cardCount;
 .penEd{
     color: rgb(220, 220, 13);
     font-size: 1rem;
-    margin-left:97%;
+    right:3%;
+    width: 1.6rem;
     position:absolute;
     margin-top: 0.7rem;
     align-items: center;
     z-index: 10;
-    padding: 5px;
+    padding: 3px;
+    cursor: pointer;
+    user-select: none;
+    
 }
 
+.status{
+    background-color: #86e0c8;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    justify-content: center;
+    right: 30%;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    user-select: none;
+}
+.pEl{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    right: 30%;
+}
+.fa-file{
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 0.4rem;
+}
 /*/ Boknings tabell /*/
 .chart-container {
     color: white;
