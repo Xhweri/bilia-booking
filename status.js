@@ -14,14 +14,14 @@ let penEd=document.querySelectorAll(".penEd");
     });
 
 let statElements = document.querySelectorAll(".status");
-let avikDiv = document.createElement("i");
+
 statElements.forEach(element => {
     let parentContent = document.querySelector(".content");
     element.addEventListener("click", () => {
         console.log("status ändrad");
         if(element.textContent==="-"){
             element.textContent="M";
-            element.style.backgroundColor="rgb(0, 255, 76)"
+            element.style.backgroundColor="#086600"
         }
         else if(element.textContent==="M"){
             element.textContent="P";
@@ -33,21 +33,24 @@ statElements.forEach(element => {
         }
         else if(element.textContent==="K"){
             element.textContent="U";
-            element.style.backgroundColor="green"
+            element.style.backgroundColor="#cda34f"
         }
         else if(element.textContent==="U"){
             element.textContent="FU";
             element.style="width: auto";
             element.style.backgroundColor="#52064c";
-            avikDiv.classList.add("pEl");
-            avikDiv.innerHTML = `<i class="fa-regular fa-file"></i>`;
-            parentContent.appendChild(avikDiv);
+            if (!element.querySelector(".pEl")) {
+                let avikDiv = document.createElement("i"); // Create <i> element
+                avikDiv.classList.add("pEl", "fa-regular", "fa-file"); // Add relevant classes
+                element.appendChild(avikDiv); // Append to the clicked element
+            }
         }
         else if(element.textContent==="FU"){
             //alert("Du ändrade status från Utlämnad till ingen alls")
             element.textContent="-";
             element.style="width: 2rem"
-            parentContent.removeChild(avikDiv);
+            let icon = element.querySelector(".pEl");
+            if (icon) icon.remove();
         }
     });
 });
