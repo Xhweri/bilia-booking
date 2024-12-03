@@ -1,0 +1,47 @@
+#top {
+    background-color: #113546;
+    color: white;
+    padding: 10px 16px;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+}
+
+#logo, img {
+    border-radius: 0.2rem;
+    height: 3rem;
+}
+.Blogo {
+    border-radius: 0.2rem;
+    height: 3rem;
+}
+
+#top h1 {
+    margin: 0;
+    margin-right: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;  /* Space between menu items */
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}

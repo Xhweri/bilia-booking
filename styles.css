@@ -275,8 +275,7 @@ body {
     border: 3px rgb(108, 108, 108) solid;
     border-radius: 5px;
     box-shadow: 0 0 10px #222222;
-    overflow: hidden;
-    
+    overflow: auto;
 }
 .olcards,
 .olcards * {
@@ -482,5 +481,3 @@ counter-increment: cardCount;
     font-weight: bold;
     font-size: 13px;
 }
-
-/*/ Hinkar /*/

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/heistyle.css">
+    <link rel="stylesheet" href="/mainstyles.css">
+    <link rel="stylesheet" href="/l-side.css">
+    <link rel="stylesheet" href="/r-side.css">
+    <link rel="stylesheet" href="/navstyles.css">
+    <link rel="stylesheet" href="/footerstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -129,6 +132,7 @@
                 </li>
             </ol>
         </div>
+        <button>Direkt bokning</button>
     </div>
     
     
@@ -170,6 +174,47 @@
         </div>
         </div>
     </div>
+
+    <div class="tree-container">
+        <ul class="tree">
+            <li>
+                <span class="folder">Mälardalen</span>
+                <ul>
+                    <li>
+                        <span class="folder">Västerås</span>
+                        <ul>
+                            <li>Avslut Däckhotell Västerås (måste bokas 3 dagar i förväg)</li>
+                            <li>Int Beg Bilar Västerås - <span class="date">2024-12-03</span></li>
+                            <li>Outlet Toyota - <span class="date">2024-12-14</span></li>
+                            <li>Hertz hink (intern) - <span class="date">2025-03-01</span></li>
+                            <li>
+                                <span class="folder">Däckbyte/Krangning Västerås</span>
+                                <ul>
+                                    <li>Glasarbete Västerås - <span class="date">2024-12-13</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="folder">Hjulskifte Västerås</span>
+                                <ul>
+                                    <li>
+                                        <span class="folder">Däcksäsong 1 Västerås</span>
+                                        <ul>
+                                            <li>Datum: <span class="date">2024-12-03</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>Däcksäsong 8 Kväll Västerås - <span class="date">2025-01-02</span></li>
+                                    <li>Däcksäsong 3 Västerås - <span class="date">2025-01-09</span></li>
+                                    <!-- Add more sub-items as needed -->
+                                </ul>
+                            </li>
+                            <!-- Add more categories as needed -->
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="heirlogic.js"></script>
     <script src="search.js"></script>
     <script src="calender.js"></script>
     <script src="status.js"></script>
