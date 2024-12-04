@@ -1,0 +1,218 @@
+.header-container {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+.Id{
+ font-size: 0.9rem;
+ width: 10rem;
+ margin: 0;
+ margin-left: 1rem;
+ display: block;
+}
+.notification-box {
+    max-width: 228px;
+    padding: 5px 1px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    background-color: #113546;
+    border: 2px solid #d3c7b1;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -10px;
+}
+
+.notification-box .highlight {
+    color: #9dd94f;
+    font-size: 18px;
+    font-weight: bold;
+}
+#search-container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 62%;
+}
+
+#search-input {
+    padding: 8px;
+    width: 13.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #113546;
+    color: white;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #222222;
+}
+#search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    border: solid 1px;
+    background-color: #113546;
+    color: white;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+.search-cat {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #113546;
+    width: 60px; /* Adjust width as needed */
+    height: 30px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: white 1px solid;
+    color: white;
+    cursor: pointer;
+    margin-left: 0.7rem;
+    margin-top: 0.1rem;
+}
+#search-button:hover {
+    background-color: #14516c;
+    color: white;
+}
+/* kalender */
+.calendar {
+    position: fixed;
+    top: 65%;
+    background-color: #113546;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #222222;
+    overflow: hidden;
+    width: 350px;
+    color: white;
+    padding: 20px;
+    transform: scale(0.6);
+    transform-origin: top left;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    padding-bottom: 3.5rem;
+    user-select: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.btn-calender {
+    color: orangered;
+    cursor: pointer;
+}
+#month-year {
+    font-weight: bold;
+    font-size: 20px;
+}
+.weekdays, .days {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+.days {
+    height: 240px;
+}
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.days div {
+    cursor: pointer;
+    transition: background-color 0.25s;
+    padding: 15px 0;
+}
+.days div:hover {
+    background-color: white;
+    color: orangered;
+}
+.days .today {
+    background-color: orangered;
+    color: white;
+}
+.days .fade {
+    color: #555;
+}
+/* Boknings tabell */
+.chart-container {
+    color: white;
+    width: 13rem;
+    margin-left: 0.6rem;
+    background-color: #113546;
+    padding: 10px;
+    border: 1px solid #1f1e1e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.chart-title {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #ccc; /* Default */
+}
+
+.bar.red {
+    background-color: #bb1313;
+}
+
+.bar.green {
+    background-color: #27c42c;
+}
+
+.bar-label {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.chart-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 13px;
+}

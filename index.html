@@ -37,9 +37,9 @@
    
     <div class="calendar">
         <div class="header">
-            <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="prev" class="btn-calender"><i class="fa-solid fa-arrow-left"></i></div>
             <div id="month-year"></div>
-            <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+            <div id="next" class="btn-calender"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
         <div class="weekdays">
             <div>Sun</div>
@@ -132,10 +132,12 @@
                 </li>
             </ol>
         </div>
-        <button>Direkt bokning</button>
+        <div class="bokBtn">
+        <button id="direktBok" class="direktBok xI">Direkt bokning</button>
+        <button id="aoFetch" class="aoFetch xI">Hämta AO</button>
+        </div>
     </div>
-    
-    
+
     <div id="search-container">
         <div class="input-wrapper">
         <select id="search-cat" class="search-cat">
