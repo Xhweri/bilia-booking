@@ -40,13 +40,13 @@ statElements.forEach(element => {
             element.style="width: auto";
             element.style.backgroundColor="#52064c";
             if (!element.querySelector(".pEl")) {
-                let avikDiv = document.createElement("i"); // Create <i> element
-                avikDiv.classList.add("pEl", "fa-regular", "fa-file"); // Add relevant classes
-                element.appendChild(avikDiv); // Append to the clicked element
+                let avikDiv = document.createElement("i"); 
+                avikDiv.classList.add("pEl", "fa-regular", "fa-file");
+                element.appendChild(avikDiv);
             }
         }
         else if(element.textContent==="FU"){
-            //alert("Du ändrade status från Utlämnad till ingen alls")
+            
             element.textContent="-";
             element.style="width: 2rem"
             let icon = element.querySelector(".pEl");

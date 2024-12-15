@@ -161,6 +161,7 @@ counter-increment: cardCount;
     bottom: 1%;
     margin-left: 1rem;
     border-radius: 6px;
+    align-items: center;
 }
 .aoFetch{
     background-color: red;
@@ -180,4 +181,10 @@ counter-increment: cardCount;
 }
 .xI:hover{
     background-color: #13465de3;
+}
+.hink-Id{
+    font-size: 1.5rem;
+    position: relative;
+    left: 85%;
+    font-weight:800;
 }

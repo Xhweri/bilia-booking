@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    justify-content: flex-start;  /* Align items at the top */
+    justify-content: flex-start; 
     min-height: 100vh;
     
 }
@@ -13,7 +13,7 @@ body {
     position: fixed;
     top: 55%;
     left: 51.5%;
-    transform: translate(-50%, -50%);  /* Centering horizontally and vertically */
+    transform: translate(-50%, -50%);  
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ body {
     width: 100px;  /* Set width as needed */
     height: auto;
     opacity: 1;
-    animation: fadeOut 3s forwards;  /* Apply the fadeOut animation */
+    animation: fadeOut 3s forwards; 
     border-radius: 1rem;
 }
 
@@ -33,12 +33,12 @@ body {
 /* FadeOut animation: Change opacity from 1 to 0 in 3 seconds */
 @keyframes fadeOut {
     0% {
-        opacity: 0; /* Start invisible */
+        opacity: 0;
     }
     50% {
-        opacity: 1; /* Fully visible midway */
+        opacity: 1;
     }
     100% {
-        opacity: 0; /* Fade out completely */
+        opacity: 0; 
     }
 }

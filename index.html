@@ -37,9 +37,9 @@
    
     <div class="calendar">
         <div class="header">
-            <div id="prev" class="btn-calender"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="prev" class="btn-calender"><i class="fa-solid fa-arrow-left arrC"></i></div>
             <div id="month-year"></div>
-            <div id="next" class="btn-calender"><i class="fa-solid fa-arrow-right"></i></div>
+            <div id="next" class="btn-calender"><i class="fa-solid fa-arrow-right arrC"></i></div>
         </div>
         <div class="weekdays">
             <div>Sun</div>
@@ -135,6 +135,7 @@
         <div class="bokBtn">
         <button id="direktBok" class="direktBok xI">Direkt bokning</button>
         <button id="aoFetch" class="aoFetch xI">Hämta AO</button>
+        <h2 class="hink-Id">Hink 1</h2>
         </div>
     </div>
 
@@ -185,40 +186,47 @@
                     <li>
                         <span class="folder">Västerås</span>
                         <ul>
-                            <li>Avslut Däckhotell Västerås (måste bokas 3 dagar i förväg)</li>
-                            <li>Int Beg Bilar Västerås - <span class="date">2024-12-03</span></li>
-                            <li>Outlet Toyota - <span class="date">2024-12-14</span></li>
-                            <li>Hertz hink (intern) - <span class="date">2025-03-01</span></li>
-                            <li>
-                                <span class="folder">Däckbyte/Krangning Västerås</span>
-                                <ul>
-                                    <li>Glasarbete Västerås - <span class="date">2024-12-13</span></li>
-                                </ul>
-                            </li>
+                            <li>Avslut Däckhotell (3 dagar i förväg)</li>
+                            <li>Beg Bilar Västerås <span class="date">2024-12-03</span></li>
+                            <li>Hertz hink (intern) <span class="date">2025-03-01</span></li>
+                                <li>
+                                    <span class="folder">Däckbyte/Krangning</span>
+                                    <ul>
+                                        <li>Glasarbete <span class="date">2024-12-13</span></li>
+                                    </ul>
+                                </li>
                             <li>
                                 <span class="folder">Hjulskifte Västerås</span>
                                 <ul>
                                     <li>
-                                        <span class="folder">Däcksäsong 1 Västerås</span>
+                                        <span class="folder">Däcksäsong</span>
                                         <ul>
-                                            <li>Datum: <span class="date">2024-12-03</span></li>
+                                            <li>Hink 1</li>
+                                            <li>Hink 2</li>
+                                            <li>Hink 3</li>
                                         </ul>
                                     </li>
-                                    <li>Däcksäsong 8 Kväll Västerås - <span class="date">2025-01-02</span></li>
-                                    <li>Däcksäsong 3 Västerås - <span class="date">2025-01-09</span></li>
-                                    <!-- Add more sub-items as needed -->
                                 </ul>
                             </li>
-                            <!-- Add more categories as needed -->
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
+
+    <div class="pie-chart">
+        <div class="pie" id="pie"><div class="blank-wheel"></div></div>
+        <div class="legend">
+          <div class="legend-item1 hLi" style="--color: rgb(19, 169, 52);"></div>
+          <div class="legend-item2 hLi" style="--color: rgb(28, 97, 150);"></div>
+          <div class="legend-item3 hLi" style="--color: rgb(245, 188, 84);;"></div>
+        </div>
+      </div>
     <script src="heirlogic.js"></script>
     <script src="search.js"></script>
     <script src="calender.js"></script>
     <script src="status.js"></script>
+    <script src="wheelAlg.js"></script>
 </body>
 </html>

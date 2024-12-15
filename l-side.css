@@ -79,7 +79,7 @@
     top: 0;
     bottom: 0;
     background-color: #113546;
-    width: 60px; /* Adjust width as needed */
+    width: 60px; 
     height: 30px;
     border-left: none;
     border-top: none;
@@ -112,6 +112,7 @@
     padding-bottom: 3.5rem;
     user-select: none;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -121,6 +122,9 @@
 .btn-calender {
     color: orangered;
     cursor: pointer;
+}
+.arrC{
+    font-size: 2rem;
 }
 #month-year {
     font-weight: bold;
@@ -192,7 +196,7 @@
     align-items: flex-end;
     border: 1px solid #ddd;
     border-radius: 3px;
-    background-color: #ccc; /* Default */
+    background-color: #ccc;
 }
 
 .bar.red {
@@ -215,4 +219,15 @@
     padding: 0 5px;
     font-weight: bold;
     font-size: 13px;
+}
+
+
+/* Responsivity */
+@media (min-width: 900px) {
+    .calendar{
+        top: 60%;
+    }
+    #search-container{
+        top: 56.3%;
+    }
 }

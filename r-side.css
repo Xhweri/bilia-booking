@@ -6,14 +6,26 @@
     width: 350px;
     padding: 15px;
     color: white;
-    background-color: #113546;
-   border-radius: 5px;
-   box-shadow: black 0px 0px 10px;
+    background-color: hwb(199 7% 73%);
+    border-radius: 5px;
+    box-shadow: black 0px 0px 10px;
+    user-select: none;
 }
-
+@media (min-width: 900px) {
+    .tree-container{
+        font-size: 0.9rem;
+        max-width: 18rem;
+        right: 0.5%;
+        top: 11%
+    }
+}
 .tree {
+    
     list-style: none;
-    padding-left: 20px;
+    padding-left: 2px;
+}
+.tree ul{
+    display: none;
 }
 
 .tree li {
@@ -57,8 +69,107 @@
 .tree li span.folder:hover {
     background: #6e95d4;
 }
+.tree ul{
+    padding-left: 20px;
+}
 
 .date {
     color: #ffffff;
     font-size: 0.9em;
 }
+
+/* Däck Data */
+
+.pie-chart {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 82%;
+    bottom: 7%;
+    user-select: none;
+  }
+  .pie-chart:hover{
+    .pie div{
+        border-radius: 10%;
+        transition: 1s;
+    }
+    .blank-wheel{
+        
+    }
+  } 
+  
+  .pie {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      rgb(245, 188, 84) 0% 0%,
+      rgb(0, 242, 255) 0% 0%,
+      rgb(19, 169, 52) 0% 0%
+    );
+    transition: 10s ease-in-out; 
+    /* Endast utifall det buggar */
+  }
+    .pie div{
+        border: solid rgb(0, 0, 0);
+    }
+
+
+  .legend {
+    position: absolute;
+    left: 0%;
+    display: flex;
+  }
+  
+  .hLi {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 50px;
+    margin-top: 8px;
+    margin-left: 20px;
+    
+  }
+  
+  .legend-item1::before {
+    content: 'A';
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: var(--color);  
+    justify-content: center;
+    
+  }
+  .legend-item2::before {
+    content: 'V';
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: var(--color); 
+    justify-content: center; 
+  }
+  .legend-item3::before {
+    content: 'S';
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: var(--color);  
+    justify-content: center;
+  }
+  
+  .blank-wheel{
+    background-color: rgb(213, 232, 226);
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    top: 24%;
+    left: 24%;
+  }

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const lastDay = new Date(year, month + 1, 0).getDate();
         monthYear.textContent = `${months[month]} ${year}`;
         daysContainer.innerHTML = '';
-        // Previous month's dates
+        
         const prevMonthLastDay = new Date(year, month, 0).getDate();
         for (let i = firstDay; i > 0; i--) {
             const dayDiv = document.createElement('div');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dayDiv.classList.add('fade');
             daysContainer.appendChild(dayDiv);
         }
-        // Current month's dates
+        
         for (let i = 1; i <= lastDay; i++) {
             const dayDiv = document.createElement('div');
             dayDiv.textContent = i;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             daysContainer.appendChild(dayDiv);
         }
-        // Next month's dates
+        
         const nextMonthStartDay = 7 - new Date(year, month + 1, 0).getDay() - 1;
         for (let i = 1; i <= nextMonthStartDay; i++) {
             const dayDiv = document.createElement('div');

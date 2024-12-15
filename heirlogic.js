@@ -9,4 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+   
+    const rootFolder = document.querySelector(".tree > li > ul");
+    if (rootFolder) {
+        rootFolder.style.display = "none"; 
+    }
 });
